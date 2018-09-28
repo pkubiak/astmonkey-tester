@@ -65,30 +65,42 @@ Success: 14 / 15 = 93.33%
 Test `astmonkey` on local filest (from path or directory):
 
 ```bash
-> python3 tester.py -l ./tests/
+> python3 tester.py -l ./bugs/
 ```
 
 ```python
-./tests/longstring.py: SyntaxError [invalid syntax (<unknown>, line 3)]
-./tests/ifexp.py: AssertionError []
-./tests/asyncwith.py: AssertionError []
-./tests/strstr.py: AssertionError []
-./tests/multiimport.py: SyntaxError [invalid syntax (<unknown>, line 1)]
-./tests/nestedif.py: SyntaxError [invalid syntax (<unknown>, line 3)]
-./tests/kwonlyargs.py: AssertionError []
-./tests/visualindent.py: SyntaxError [invalid syntax (<unknown>, line 2)]
-./tests/rstring.py: AssertionError []
-./tests/matmul.py: KeyError [<class '_ast.MatMult'>]
-./tests/elif.py: SyntaxError [invalid syntax (<unknown>, line 3)]
-./tests/tryelse.py: AssertionError []
-./tests/strannotation.py: SyntaxError [invalid syntax (<unknown>, line 1)]
+./bugs/longstring.py: SyntaxError [invalid syntax (<unknown>, line 3)]
+./bugs/ifexp.py: AssertionError []
+./bugs/asyncwith.py: AssertionError []
+./bugs/strstr.py: AssertionError []
+./bugs/multiimport.py: SyntaxError [invalid syntax (<unknown>, line 1)]
+./bugs/nestedif.py: SyntaxError [invalid syntax (<unknown>, line 3)]
+./bugs/kwonlyargs.py: AssertionError []
+./bugs/visualindent.py: SyntaxError [invalid syntax (<unknown>, line 2)]
+./bugs/rstring.py: AssertionError []
+./bugs/matmul.py: KeyError [<class '_ast.MatMult'>]
+./bugs/elif.py: SyntaxError [invalid syntax (<unknown>, line 3)]
+./bugs/tryelse.py: AssertionError []
+./bugs/strannotation.py: SyntaxError [invalid syntax (<unknown>, line 1)]
 
 Success: 0 / 13 = 0.00%
 ```
 
+## Complex test suit ## 
+To test probably all python features, you can use `python/cpython` repo:
+
+```bash
+> python3 tester.py python/cpython
+```
+
+```python
+<many lines>
+
+Success: 1124 / 1850 = 60.76%
+```
 
 ## Test Cases ##
-Directory `tests/` contains samples codes which raise exception when test with following code:
+Directory `bugs/` contains samples codes which raise exception when test with following code:
 ```python
 import ast
 from astmonkey import visitors
