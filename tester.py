@@ -15,7 +15,7 @@ def args_parse():
 
     parser.add_argument('path', help='GitHub repo url or name')
     parser.add_argument('-b', '--branch', help='Branch name', default='master')
-    parser.add_argument('-i', '--interactive', action='store_true', help='Run in interactive mode, allow investigate bugs')
+    parser.add_argument('-i', '--interactive', action='store_true', help='Run in interactive mode, allow investigating bugs')
     parser.add_argument('-l', '--local', action='store_true', help='Interpret given url as local file path')
 
     return parser.parse_args()
