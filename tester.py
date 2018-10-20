@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 """
 Validate astmonkey library on python files from given github repository.
 """

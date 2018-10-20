@@ -1,1 +1,1 @@
-x = y * (z if z > 1 else 1)
+y * (z if z > 1 else 1)
